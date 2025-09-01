@@ -13,6 +13,20 @@
   pointer-events: none;
 }
 
+.moonHaloweenImg
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  width: auto;
+  height: auto;
+  z-index: -1; /* Viktig! */
+  object-fit: cover;
+  /* opacity: 0.5; */
+  pointer-events: none;
+}
 body.jul h1{
     position: relative;
   z-index: 1;
