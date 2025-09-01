@@ -1,0 +1,264 @@
+@media screen and (max-width: 2748px) {
+  .bgvideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  width: auto;
+  height: auto;
+  z-index: -1; /* Viktig! */
+  object-fit: cover;
+  opacity: 0.5; /* Juster etter ønske */
+  pointer-events: none;
+}
+
+.moonHaloweenImg
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  width: auto;
+  height: auto;
+  z-index: -1; /* Viktig! */
+  object-fit: cover;
+  /* opacity: 0.5; */
+  pointer-events: none;
+}
+body.jul h1{
+    position: relative;
+  z-index: 1;
+  color: white ;
+}
+  body {
+    margin: 0;
+    max-width: 100%;
+  }
+  .Tryllekunstneren {
+    margin: 0;
+    text-shadow: blue 9px 2px;
+    font-size: 6rem;
+    padding: 0;
+  }
+
+  .menyvalg {
+    font-size: 30px;
+  }
+  .color {
+    background-color: rgb(136, 136, 255);
+    font-size: 50px;
+  }
+  .Hovedside {
+    background-color: rgb(136, 136, 255);
+  }
+
+  .Andini_tryllekunstneren {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #TryllingID {
+    font-size: 3rem;
+    padding-top: 0;
+    padding-left: 100px;
+  }
+  .iconzize {
+    width: 50px;
+    height: auto;
+  }
+  .Andini {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Dancing Script", cursive;
+    font-size: 10rem;
+  }
+  .overskrift {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    max-width: 100%;
+  }
+  .buttondiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* -top: 0px; */
+    /* -bottom: 50px;
+    -left: 15px; */
+  }
+  /* .TryllekunstnerenLight {
+  text-shadow: none;
+} */
+  /* .dark {
+  font-size: 40px;
+  text-shadow: blue 9px 2px;
+} */
+  /* .Light {
+  font-size: 40px;
+  color: black;
+  text-shadow: none;
+} */
+  .anders-tørkle {
+    width: 370px;
+    height: 270px;
+  }
+  .moon {
+    background-color: black;
+    color: white;
+    /* text-shadow: blue 9px 2px; */
+  }
+  .SukkerspinnmaskinClass {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .menyvalg {
+    background-color: blue;
+    color: white;
+  }
+  /* .Sukkerspinnmaskin {
+  width: 370px;
+  height: 270px;
+  border-radius: 50%;
+} */
+  .TrylleshowID {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .show {
+    width: 370px;
+    height: 270px;
+  }
+  .due {
+    width: 370px;
+    height: 270px;
+  }
+
+  .div2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .Bor_du_i_Bergen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  /* .section_Hedder {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+} */
+  /* .overskrift_2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly; */
+  /* align-items: center; */
+  /* font-size: 100px;
+    -top: 0px;
+} */
+
+  .Ballonggjøglingh2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .ballonggj {
+    width: 370px;
+    height: 270px;
+    /* -top: -200px; */
+    border-radius: 50%;
+  }
+  .Ballonggjøgling {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .hamburgerbutton {
+    display: none;
+  }
+  /* .color {
+    background-color: rgb(136, 136, 255);
+    font-size: 20px;
+  } */
+  .Hovedside {
+    background-color: rgb(136, 136, 255);
+  }
+  .iframe {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+    border-radius: 50%;
+    width: 35rem;
+
+    height: 25rem;
+    /* margin-right: 40px; */
+    /* -top: 150px; */
+  }
+  #Andini_med_kanin {
+    border-radius: 50%;
+    width: 35rem;
+    height: auto;
+  }
+  #Sukkerspinn {
+  }
+  /* .Andini-med-kanin2{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;   
+} */
+  .Sukkerspinnmaskin {
+    display: none;
+  }
+  .test5 {
+    font-size: 50px;
+    max-width: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* .header {
+    display: none;
+ }
+/* } */
+/* .buttondiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} */
+/* .iconzize {
+  display: block;
+  width: 32px;
+  height: 32px;
+} */
+.kontaktinfo {
+  font-size: 25px;
+  /* max-width: 27rem; */
+  margin: 30px;
+  padding: 3.3%;
+  font-family: "arial", sans-serif;
+
+  /* max-width: 50%; */
+}

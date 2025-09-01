@@ -1,0 +1,214 @@
+@media screen and (max-width: 912px) {
+  .bgvideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  width: auto;
+  height: 100%;
+  z-index: -1; /* Viktig! */
+  object-fit: cover;
+  opacity: 0.5; /* Juster etter ønske */
+  pointer-events: none;
+}
+
+.moonHaloweenImg
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  width: auto;
+  height: auto;
+  z-index: -1; /* Viktig! */
+  object-fit: cover;
+  /* opacity: 0.5; */
+  pointer-events: none;
+}
+body.jul h1{
+    position: relative;
+  z-index: 1;
+  color: white ;
+}
+  body {
+    transform: scale(1);
+    margin: 0;
+    max-width: 100%;
+  }
+  .hamburgerbutton {
+    display: flex;
+    width: 32px;
+    height: 32px;
+  }
+  /* .hamburgerbuttonDiv {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      -top: 0px;
+    } */
+  .active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .overskrift,
+  .Andini_tryllekunstneren {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .hidden {
+    display: none;
+  }
+  #føler_meg_privilegertP,
+  p,
+  h2 {
+    font-size: 30px;
+    margin-left: 30px;
+    font-size: 20px;
+    height: auto;
+    /* inline-size: 90%; */
+    text-shadow: none;
+    font-family: "arial", sans-serif;
+    padding: 0;
+    /* inline-size: 80%; */
+  }
+  .div2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    justify-content: center;
+  }
+  .Andini-med-kanin2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  /* .section_Hedder{
+      display: flex;
+  flex-direction: column;} */
+  #Andini_med_kanin {
+    width: 300px;
+    height: auto;
+  }
+  /* {   
+          width: 200px;
+          height: auto;
+          border-radius: 50%;
+          -top: -200px;
+      } */
+  .Andini-med-kanin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .Andini {
+    margin: 0;
+    font-size: 90px;
+    font-family: "Dancing Script", cursive;
+
+    /* -top: -100px; */
+  }
+  .due {
+    height: auto;
+    width: 200px;
+  }
+  .anders-tørkle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    justify-content: center;
+    height: auto;
+    width: 200px;
+  }
+  .show {
+    height: auto;
+    width: 200px;
+  }
+  .BallonggjøglingClass {
+    font-size: 10px;
+    inline-size: 200px;
+  }
+  /* .div4 {
+      height: auto;
+      width: auto;
+      -top: 200px;
+      z-index: 1;
+    } */
+  .pelement {
+    /* -left: 600px;   */
+  }
+  /* .div1 {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      -top: 300px;
+    } */
+  .sukkerspinnDIV {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    font-size: 12px;
+  }
+  /* .Andini, .Andini {
+          font-size: 70px;
+          -top: 0px;
+      } */
+  .Tryllekunstneren {
+    margin: 0;
+    font-size: 30px;
+    /* -bottom: 100px; */
+  }
+  .Sukkerspinnmaskin {
+    width: 270px;
+    height: 170;
+  }
+  .ballonggj {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  /* justify-content: space-evenly; */
+  /* -right: 20%; */
+
+  /* .headerContent{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;} */
+  /* @media screen and (min-width: 1024) {
+  .oal_bilde{
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     align-items: center;*/
+  .iframe {
+    display: none;
+  }
+
+  .kontaktinfo {
+    font-size: 20px;
+    max-width: 100%;
+    /* display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; */
+    margin: 30px;
+    padding: 3.3%;
+    font-family: "arial", sans-serif;
+  }
+  /* h2 {
+    font-size: 3rem;
+  } */
+}
