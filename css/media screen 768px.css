@@ -49,12 +49,15 @@ body.jul h1{
       align-items: center;
       -top: 0px;
     } */
-  .active {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+     .gråbakgrunn {
+    background-color: rgba(0, 0, 0, 0.7); /* Svart med 70% dekning */
+;
+  width: 100vw !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box;
+  position: relative;
+}
   .overskrift,
   .Andini_tryllekunstneren {
     flex: 1;
@@ -204,8 +207,8 @@ body.jul h1{
     flex-direction: row;
     justify-content: center;
     align-items: center; */
-    margin: 30px;
-    padding: 3.3%;
+    /* margin: 30px;
+    padding: 3.3%; */
     font-family: "arial", sans-serif;
   }
   /* h2 {

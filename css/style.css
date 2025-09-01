@@ -6,7 +6,9 @@ body {
   box-sizing: border-box;
 }
 p{padding: 0;
-margin: 0;}
+margin: 0;
+/* background-color: rgba(0, 0, 0, 0.5); */
+}
   .Tryllekunstneren {
     margin: 0;
     text-shadow: blue 9px 2px;
@@ -87,7 +89,8 @@ margin: 0;}
     /* text-shadow: blue 9px 2px; */
   }
 .gråbakgrunn {
-  background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7); /* Svart med 70% dekning */
+;
   width: 100vw !important;
   margin: 0 !important;
   padding: 0 !important;
@@ -246,6 +249,8 @@ margin: 0;}
   height: 32px;
 } */
 .kontaktinfo {
+     background-color: rgba(0, 0, 0, 0.7); /* Svart med 70% dekning */
+;
  margin: 0;
   padding: 0;
   font-family: "arial", sans-serif;

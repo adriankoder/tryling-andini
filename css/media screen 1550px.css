@@ -309,5 +309,7 @@ body.jul h1{
   }
   .kontaktinfo {
     font-family: "arial", sans-serif;
+       background-color: rgba(0, 0, 0, 0.7); /* Svart med 70% dekning */
+;
   }
 }

@@ -108,7 +108,7 @@ for (let i = 0; i < menyknapper.length; i++) {
       const forBestiling =
         "<br> For bestilling, forespørsler eller annen informasjon kan jeg kontaktes på følgende måter:";
       const tlf = "<br>tlf nr 40834567";
-kontaktInfo.style.backgroundColor = "rgba(0, 0, 0, 0.5)";      // Kombinerer strenger
+      // Kombinerer strenger
       const email = num2 + num3 + num4 + num6 + num5 + num1 + num7;
       const emailLink = `<a href="mailto:${email}">${email}</a>`;
       const combined =
@@ -167,6 +167,7 @@ if (today.getDate() === 24 && today.getMonth() === 11) {
 } else if (today.getDate() === 1 && today.getMonth() === 8) {
   // Halloween
   document.body.classList.add('moonHaloween');
+  document.body.classList.add('moon');
   document.body.classList.remove('moon');
   document.body.classList.remove('jul');
   bgvideo.classList.remove('jul');
@@ -180,9 +181,19 @@ for (let i = 0; i < icons.length; i++) {
 } else {
   // Standard: Moon-utgaven
   document.body.classList.remove('moonHaloween');
+ // ...existing code...
+
+const moonHaloweenImg = document.querySelector('.moonHaloweenImg');
+if (moonHaloweenImg) {
+  moonHaloweenImg.style.display = "none";
+}
+
+// ...existing code...
   document.body.classList.remove('jul');
   document.body.classList.add('moon');
   bgvideo.classList.add('ikkeJul');
+  console.log("Det er ikke julaften eller Haloween.");
+  
 }
 
 // ...existing code...
