@@ -91,6 +91,8 @@ for (let i = 0; i < menyknapper.length; i++) {
 
     if (e.target.id === "Kontakt") {
       // KONTAKTKNAPP
+     
+   
       bildeSomByttes.style.display = "./asset/Andini-med-kanin-oval.jpg";
       TryllingID.innerHTML = ` `;
       const num1 = "neren";
@@ -104,9 +106,9 @@ for (let i = 0; i < menyknapper.length; i++) {
       const tegn = ":";
       const mellomroim = "";
       const forBestiling =
-        " For bestilling, forespørsler eller annen informasjon kan jeg kontaktes på følgende måter:";
+        "<br> For bestilling, forespørsler eller annen informasjon kan jeg kontaktes på følgende måter:";
       const tlf = "<br>tlf nr 40834567";
-      // Kombinerer strenger
+kontaktInfo.style.backgroundColor = "rgba(0, 0, 0, 0.5)";      // Kombinerer strenger
       const email = num2 + num3 + num4 + num6 + num5 + num1 + num7;
       const emailLink = `<a href="mailto:${email}">${email}</a>`;
       const combined =
@@ -119,7 +121,8 @@ for (let i = 0; i < menyknapper.length; i++) {
         mellomroim +
         tlf;
       kontaktInfo.innerHTML = combined;
-
+kontaktInfo.style.padding = "0px";
+kontaktInfo.style.margin = "0px";
       føler_meg_privilegert.style.display = "none";
     } else if (e.target.id === "føler_meg_privilegert") {
       føler_meg_privilegert.style.display = "block";

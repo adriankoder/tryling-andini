@@ -1,9 +1,12 @@
 @media screen and (max-width: 2748px) {
-  body {
-
-    margin: 0;
-    max-width: 100%;
-  }
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  box-sizing: border-box;
+}
+p{padding: 0;
+margin: 0;}
   .Tryllekunstneren {
     margin: 0;
     text-shadow: blue 9px 2px;
@@ -30,11 +33,8 @@
     justify-content: center;
     align-items: center;
   }
-  #TryllingID {
-    font-size: 3rem;
-    padding-top: 0;
-    padding-left: 100px;
-  }
+
+  
   .iconzize {
     width: 50px;
     height: auto;
@@ -80,15 +80,28 @@
     width: 370px;
     height: 270px;
   }
-  
+
   .moon {
     background-color: black;
     color: white;
     /* text-shadow: blue 9px 2px; */
   }
-  .gråbakgrunn {
-    background-color: rgba(0, 0, 0, 0.5);
-  }
+.gråbakgrunn {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100vw !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box;
+  position: relative;
+  /* Fjern left og transform! */
+}
+  
+ #TryllingID {
+  font-size: 3rem;
+  padding: 0!important;
+  width: 100%;
+  box-sizing: border-box;
+}
   .moonHaloween {
     color: orange;
     /* text-shadow: blue 9px 2px; */
@@ -215,7 +228,7 @@
     justify-content: center;
     align-items: center;
   }
-}
+
 
 /* .header {
     display: none;
@@ -233,10 +246,8 @@
   height: 32px;
 } */
 .kontaktinfo {
-  font-size: 25px;
-  /* max-width: 27rem; */
-  margin: 30px;
-  padding: 3.3%;
+ margin: 0;
+  padding: 0;
   font-family: "arial", sans-serif;
 
   /* max-width: 50%; */
@@ -275,4 +286,5 @@ body.jul h1{
     position: relative;
   z-index: 1;
   color: white
+}
 }

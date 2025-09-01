@@ -24,20 +24,7 @@ body.jul h1{
     box-sizing: border-box;
     max-width: 100%;
   }
-  .moonHaloweenImg
-{
-  position: fixed;
-  top: 0;
-  left: 0;
-  min-width: 100vw;
-  min-height: 100vh;
-  width: auto;
-  height: auto;
-  z-index: -1; /* Viktig! */
-  object-fit: cover;
-  /* opacity: 0.5; */
-  pointer-events: none;
-}
+
   body {
     overflow-y: scroll;
     margin: 0;
@@ -321,10 +308,6 @@ body.jul h1{
     display: none;
   }
   .kontaktinfo {
-    font-size: 20px;
-    margin: 30px;
-    padding: 3.3%;
-    max-width: 50%;
     font-family: "arial", sans-serif;
   }
 }
