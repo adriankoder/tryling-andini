@@ -89,7 +89,7 @@ margin: 0;
     /* text-shadow: blue 9px 2px; */
   }
 .gråbakgrunn {
-    background-color: rgba(0, 0, 0, 0.7); /* Svart med 70% dekning */
+    background-color: rgba(0, 0, 0, 0.7)!important; /* Svart med 70% dekning */
 ;
   width: 100vw !important;
   margin: 0 !important;

@@ -1,6 +1,6 @@
 import { teamswitshFunction } from "./js/teamswitshtoggle.js";
 import { teamswitshBUTTON } from "./js/KNAPP.JS";
-
+import { nåErDetJul } from "./jul.js";
 const TryllingID = document.getElementById("TryllingID");
 const føler_meg_privilegert = document.getElementById("føler_meg_privilegertP");
 let menyknapper = document.getElementsByClassName("menyvalg");
@@ -149,40 +149,28 @@ hamburgerimg.addEventListener("click", function () {
       ul.classList.add(active);
       console.log("hidden");
     } else {
+      ul.classList.add(active);
     }
   }
 });
+ const today = new Date();
+  const bgvideo = document.getElementById("bgvideo"); // om du har <video id="bgvideo">
+  const moonHaloweenImgs = document.querySelectorAll(".moonHaloweenImg");
+  if (!nåErDetJul(today, bgvideo) && !aktiverHaloween(today, moonHaloweenImgs)) {
+    // Standard: Moon-utgaven
+    const icons = document.getElementsByClassName("iconzize");
+    for (let i = 0; i < icons.length; i++) {
+      icons[i].style.display = "block";
+    }
 
+    document.body.classList.remove("moonHaloween");
+    document.body.classList.remove("jul");
+    document.body.classList.add("moon");
 
-const today = new Date();
-const bgvideo = document.getElementById('bgvideo');
+    // Skjul halloween-bildene hvis de finnes
+    moonHaloweenImgs.forEach(img => (img.style.display = "none"));
 
-if (today.getDate() === 24 && today.getMonth() === 11) {
-  // Julaften
-  document.body.classList.add('jul');
-  document.body.classList.remove('moon');
-  document.body.classList.remove('moonHaloween');
-  bgvideo.classList.remove('ikkeJul');
-  console.log("Det er julaften!");
-} else if (today.getDate() === 1 && today.getMonth() === 8) {
-  // Halloween
-  document.body.classList.add('moonHaloween');
-  document.body.classList.add('moon');
-  document.body.classList.remove('moon');
-  document.body.classList.remove('jul');
-  bgvideo.classList.remove('jul');
-   const iconzize = document.getElementById('iconzize');
- const icons = document.getElementsByClassName('iconzize');
-for (let i = 0; i < icons.length; i++) {
-  icons[i].style.display = "none";
-}
-  document.style.iconzize = "display: none";
-  console.log("Det er Haloween!");
-} else {
-  // Standard: Moon-utgaven
-  document.body.classList.remove('moonHaloween');
- // ...existing code...
-
+    console.log("ingen høytid aktivert");
 const moonHaloweenImg = document.querySelector('.moonHaloweenImg');
 if (moonHaloweenImg) {
   moonHaloweenImg.style.display = "none";
@@ -191,11 +179,9 @@ if (moonHaloweenImg) {
 // ...existing code...
   document.body.classList.remove('jul');
   document.body.classList.add('moon');
-  bgvideo.classList.add('ikkeJul');
   console.log("Det er ikke julaften eller Haloween.");
   
-}
-
+ }
 // ...existing code...
 
 
