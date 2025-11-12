@@ -1,11 +1,29 @@
 import { teamswitshFunction } from "./js/teamswitshtoggle.js";
 import { teamswitshBUTTON } from "./js/KNAPP.JS";
 import { nåErDetJul } from "./jul.js";
+import { aktiverHaloween } from "./haloween.js";
 const TryllingID = document.getElementById("TryllingID");
-const føler_meg_privilegert = document.getElementById("føler_meg_privilegertP");
+const føler_meg_privilegert = document.getElementById("føler_meg_privilegertP") || document.createElement("div");
 let menyknapper = document.getElementsByClassName("menyvalg");
 let bildeSomByttes = document.getElementById("Andini_med_kanin");
 let kontaktInfo = document.getElementById("kontaktinfo");
+
+// Hjelpefunksjon for å legge til julebilder hvis det er jultid
+function leggTilJulebilder() {
+  const today = new Date();
+  const erJul = (today.getDate() === 12 && today.getMonth() === 10);
+  
+  if (erJul) {
+    const julebilderHTML = `
+      <div class="julenisseDiv" style="display: flex !important;">
+        <img src="/asset/christmas-4645449.jpg" class="pressanger" alt="" style="display: block !important;">
+        <img src="/asset/ai-generated-8445837.jpg" class="julenisse" alt="" style="display: block !important;">
+        <img src="/asset/christmas-3040550.jpg" class="juleTre" alt="" style="display: block !important;">
+      </div>`;
+    return julebilderHTML;
+  }
+  return '';
+}
 
 for (let i = 0; i < menyknapper.length; i++) {
   menyknapper[i].addEventListener("mouseover", (e) => {
@@ -32,7 +50,7 @@ for (let i = 0; i < menyknapper.length; i++) {
          Jeg har drevet med barneunderholdning siden 1994, da jeg som 14-åring
         vant min første lokale talentiade. Siden den gang er tryllingen blitt en
         del av meg, en livsstil som jeg aldri kan slutte med
-      </p>`;
+      </p>${leggTilJulebilder()}`;
     }
 
     if (e.target.id === "Trylling") {
@@ -51,7 +69,7 @@ for (let i = 0; i < menyknapper.length; i++) {
           alle barna, gjerne i kombinasjon med at alle får klappe Pelle kanin
           og/eller trylleduene Trylleliten og Spirrevippen. Jeg bretter ca 50-60
           ballonger pr halvtime. Ved behov, medbringer jeg eget trådløst
-          mini-micanlegg</p>
+          mini-micanlegg</p>${leggTilJulebilder()}
           `;
     } else {
       bildeSomByttes.style.opacity = 1;
@@ -126,7 +144,7 @@ kontaktInfo.style.margin = "0px";
       føler_meg_privilegert.style.display = "none";
     } else if (e.target.id === "føler_meg_privilegert") {
       føler_meg_privilegert.style.display = "block";
-      console.log("kontakt");
+      // console.log("kontakt");
     }
   });
 }
@@ -153,40 +171,50 @@ hamburgerimg.addEventListener("click", function () {
     }
   }
 });
- const today = new Date();
-  const bgvideo = document.getElementById("bgvideo"); // om du har <video id="bgvideo">
-  const moonHaloweenImgs = document.querySelectorAll(".moonHaloweenImg");
-  if (!nåErDetJul(today, bgvideo) && !aktiverHaloween(today, moonHaloweenImgs)) {
-    // Standard: Moon-utgaven
-    const icons = document.getElementsByClassName("iconzize");
-    for (let i = 0; i < icons.length; i++) {
-      icons[i].style.display = "block";
-    }
+// Høytid-initialisering - kjøres automatisk ved last
+(() => {
+  console.log('🎄 HØYTID-SCRIPT STARTER!');
+  const today = new Date();
+  console.log('📅 Dagens dato:', today.getDate(), 'Måned:', today.getMonth());
+  const isJul = (today.getDate() === 12 && today.getMonth() === 10); // Hele desember (month 11)
+  const isHaloween = (today.getDate() === 31 && today.getMonth() === 9);
+  console.log('🎅 isJul =', isJul, '🎃 isHaloween =', isHaloween);
 
-    document.body.classList.remove("moonHaloween");
-    document.body.classList.remove("jul");
-    document.body.classList.add("moon");
+  // Hvis det er jul, kjør jul-logikk
+  if (isJul) {
+    console.log('✅ KALLER nåErDetJul()');
+    if (typeof nåErDetJul === 'function') nåErDetJul();
+    return;
+  }
 
-    // Skjul halloween-bildene hvis de finnes
-    moonHaloweenImgs.forEach(img => (img.style.display = "none"));
+  // Hvis det er halloween, kjør halloween-logikk
+  if (isHaloween) {
+    if (typeof aktiverHaloween === 'function') aktiverHaloween();
+    return;
+  }
 
-    console.log("ingen høytid aktivert");
-const moonHaloweenImg = document.querySelector('.moonHaloweenImg');
-if (moonHaloweenImg) {
-  moonHaloweenImg.style.display = "none";
-}
-
-// ...existing code...
-  document.body.classList.remove('jul');
-  document.body.classList.add('moon');
-  console.log("Det er ikke julaften eller Haloween.");
+  // Hvis verken jul eller halloween - standard moon-utgaven
+  document.body.classList.remove('julenisse');
+      const bgvideo = document.querySelectorAll('.bgvideo');
+  bgvideo.forEach(img => (img.style.display = 'none'));
+  const moonHaloweenImgs = document.querySelectorAll('.moonHaloweenImg');
+  console.log('DEBUG: funnet moonHaloweenImgs:', moonHaloweenImgs.length, moonHaloweenImgs);
+  const icons = document.getElementsByClassName('iconzize');
   
- }
-// ...existing code...
+  for (let i = 0; i < icons.length; i++) {
+    icons[i].style.display = 'block';
+  }
 
+  document.body.classList.remove('moonHaloween', 'jul');
+  document.body.classList.add('moon');
+  if (moonHaloweenImgs && moonHaloweenImgs.length) {
+    moonHaloweenImgs.forEach(img => (img.style.display = 'none'));
+  }
+  console.log('ingen høytid aktivert');
+})();
 
-// ...existing code...
-
-// ...existing code...
-
-// ...existing code...
+const teamSwitch = document.getElementById("teamSwitch");
+teamSwitch.alt = "bytt mellom lys og mørkt tema";
+teamSwitch.addEventListener("click", function () {
+  teamswitshFunction("sun", "moon");
+});

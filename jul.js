@@ -1,22 +1,51 @@
+// Jul
 function nåErDetJul() {
-  // return true;
+  const today = new Date();
 
-const today = new Date();
-const bgvideo = document.getElementById('bgvideo');
+  // Jul er hele november for testing -> month 10 (0-indeksert)
+  if (today.getDate() === 12 && today.getMonth() === 10) {
 
-if (today.getDate() === 3 && today.getMonth() === 8) {
-  // Julaften
-  document.body.classList.add('jul');
-  document.body.classList.remove('moon');
-  document.body.classList.remove('moonHaloween');
-  bgvideo.classList.add('ikkeJul');
-console.log("Det er julaften!");
-// } else if (today.getDate() === 1 && today.getMonth() === 8) {
+    const bgvideo = document.getElementById('bgvideo');
+    const teamSwitch = document.getElementById('teamSwitch');
+    
+    // Vis hele julenisseDiv containeren først
+    const julenisseDiv = document.querySelector('.julenisseDiv');
+    if (julenisseDiv) {
+      julenisseDiv.style.setProperty('display', 'flex', 'important');
+    }
+    
+    // Vis alle julebilder
+    const julenisseImgs = document.querySelectorAll('.julenisse, .pressanger, .juleTre');
+    julenisseImgs.forEach(img => img.style.setProperty('display', 'block', 'important'));
+    
+    console.log('Jul aktivert! teamSwitch element:', teamSwitch);
 
-} else {
-  // Standard: Moon-utgaven
-  document.body.classList.remove('moonHaloween');
- // ...existing code...
+    // Legg til/ta bort klasser for jul
+    document.body.classList.add('jul');
+    document.body.classList.remove('moon', 'moonHaloween', 'gråbakgrunn');
+    document.body.classList.remove('julenisse');
+    if (teamSwitch) {
+      teamSwitch.style.setProperty('display', 'none', 'important');
+      teamSwitch.classList.add('hidden');
+      console.log('teamSwitch skulle være skjult nå');
+    } else {
+      console.log('FEIL: teamSwitch element ikke funnet!');
+    }
+    
+    if (bgvideo) bgvideo.classList.add('Jul');
 
-}}
-export { nåErDetJul }; 
+    // Skjul ikoner som ikke skal vises
+    const icons = document.getElementsByClassName('iconzize');
+    for (let i = 0; i < icons.length; i++) {
+      icons[i].style.display = 'none !important';
+    }
+
+    // Skjul Halloween-bilder
+    const moonHaloweenImgs = document.querySelectorAll('.moonHaloweenImg');
+    moonHaloweenImgs.forEach(img => (img.style.display = 'none'));
+
+    console.log('Det er jul!');
+  }
+}
+
+export { nåErDetJul };
