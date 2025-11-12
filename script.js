@@ -11,7 +11,7 @@ let kontaktInfo = document.getElementById("kontaktinfo");
 // Hjelpefunksjon for å legge til julebilder hvis det er jultid
 function leggTilJulebilder() {
   const today = new Date();
-  const erJul = (today.getDate() === 12 && today.getMonth() === 10);
+  const erJul = (today.getDate() === 13 && today.getMonth() === 10);
   
   if (erJul) {
     const julebilderHTML = `
@@ -176,7 +176,7 @@ hamburgerimg.addEventListener("click", function () {
   console.log('🎄 HØYTID-SCRIPT STARTER!');
   const today = new Date();
   console.log('📅 Dagens dato:', today.getDate(), 'Måned:', today.getMonth());
-  const isJul = (today.getDate() === 12 && today.getMonth() === 10); // Hele desember (month 11)
+  const isJul = (today.getDate() === 13 && today.getMonth() === 10); // Hele desember (month 11)
   const isHaloween = (today.getDate() === 31 && today.getMonth() === 9);
   console.log('🎅 isJul =', isJul, '🎃 isHaloween =', isHaloween);
 

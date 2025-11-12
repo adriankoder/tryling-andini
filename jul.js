@@ -3,7 +3,7 @@ function nåErDetJul() {
   const today = new Date();
 
   // Jul er hele november for testing -> month 10 (0-indeksert)
-  if (today.getDate() === 12 && today.getMonth() === 10) {
+  if (today.getDate() === 13 && today.getMonth() === 10) {
 
     const bgvideo = document.getElementById('bgvideo');
     const teamSwitch = document.getElementById('teamSwitch');

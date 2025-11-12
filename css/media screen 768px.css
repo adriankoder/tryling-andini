@@ -12,7 +12,13 @@
   opacity: 0.5; /* Juster etter ønske */
   pointer-events: none;
 }
-
+.julenisseDiv {
+    display: none !important; /* Skjult som standard, vises kun i jultid */
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 20px;
+  } 
 .moonHaloweenImg
 {
   position: fixed;

@@ -36,8 +36,9 @@ body.jul h1{
   }
   .sun {
     background-color: white;
-    color: black;
+    color: white;
   }
+
   .moon {
     background-color: black;
     color: white;
